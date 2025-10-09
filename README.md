@@ -32,3 +32,18 @@ This project implements a Random Forest classifier to predict whether the S&P 50
 Install the required Python libraries:
 ```bash
 pip install -r requirements.txt
+```
+## References & Acknowledgments
+
+This project is based on the S&P 500 prediction tutorial by [Vik Paruchuri](https://github.com/VikParuchuri). The original implementation and methodology provided the foundation for this machine learning model.
+
+### Original Tutorial
+- **Author**: Vik Paruchuri
+- **GitHub**: [https://github.com/VikParuchuri](https://github.com/VikParuchuri)
+- **Tutorial**: S&P 500 Stock Market Prediction with Machine Learning
+
+### Modifications
+This implementation includes:
+- Updated data through 2025
+- Enhanced documentation and code comments
+- Additional performance metrics and analysis
