@@ -1,43 +1,49 @@
-# Netflix-Themed Portfolio Website
-A responsive portfolio website that recreates Netflix's UI/UX design, presenting professional experience as streaming content with interactive animations and smooth transitions.
+# S&P 500 Market Direction Predictor
+
+A machine learning model for predicting daily S&P 500 index movements using Random Forest classification with engineered technical indicators and rolling statistics.
 
 ## Overview
-This portfolio reimagines the traditional resume as a Netflix interface where work experience becomes "episodes," projects are "trending content," and skills are organized as curated categories. The implementation leverages modern web technologies to create an immersive, familiar interface.
+
+This project implements a Random Forest classifier to predict whether the S&P 500 index will close higher or lower the following trading day. The model uses historical price data and engineered features including moving average ratios and trend indicators across multiple time horizons.
 
 ## Features
-- **Dynamic Hero Section**: Full-viewport billboard with parallax scrolling and Netflix Original branding
-- **Project Carousels**: Horizontally-scrollable cards with signature zoom-on-hover effects
-- **Smooth Navigation**: Sticky header with scroll-triggered transparency transitions
-- **Interactive Elements**: 3D card tilt effects, typing animations, and ripple click feedback
 
-## Design Implementation
-- **Responsive Design**: Mobile-first approach supporting all viewport sizes
-- **Accessibility**: Semantic HTML5 structure with proper navigation
+- **Historical Data Analysis**: Utilizes S&P 500 data from 1990-present via Yahoo Finance API
+- **Feature Engineering**: Implements rolling statistics and technical indicators across 5 time horizons (2, 5, 60, 250, 1000 days)
+- **Walk-Forward Backtesting**: Employs expanding window validation to simulate real trading conditions
+- **Conservative Prediction Threshold**: Uses 60% probability threshold to reduce false positives
+
+## Model Performance
+
+- **Precision**: 57.47% (vs. 54.66% baseline)
+- **Strategy**: Conservative approach with high-confidence signals only
+- **Validation**: Out-of-sample backtesting from 2500+ trading days
 
 ## Technical Stack
-- HTML5 for semantic markup
-- CSS3 for animations and responsive layouts
-- Vanilla JavaScript for interactions
-- Intersection Observer API for scroll animations
-- CSS Variables for dynamic theming
 
-## Project Structure
+- Python 3.x
+- pandas & NumPy for data manipulation
+- scikit-learn for machine learning
+- yfinance for market data
+- matplotlib for visualization
+
+### Prerequisites
+
+Install the required Python libraries:
+```bash
+pip install -r requirements.txt
 ```
-netflix-portfolio/
-├── index.html          # Main HTML structure
-├── styles.css          # Complete styling and animations
-├── script.js           # Interactive functionality
-└── README.md           # Documentation
-```
+## References & Acknowledgments
 
-## Customization Guide
-To personalize the portfolio:
-- Update personal information in the hero section
-- Replace project cards with your work experience
-- Modify skill categories and badges
-- Update contact links (LinkedIn, GitHub, email)
+This project is based on the S&P 500 prediction tutorial by [Vik Paruchuri](https://github.com/VikParuchuri). The original implementation and methodology provided the foundation for this machine learning model.
 
-## Author
-**Shaurya Dubey**  
-**Email**: dubey.shau@northeastern.edu  
-**Location**: Boston, MA
+### Original Tutorial
+- **Author**: Vik Paruchuri
+- **GitHub**: [https://github.com/VikParuchuri](https://github.com/VikParuchuri)
+- **Tutorial**: S&P 500 Stock Market Prediction with Machine Learning
+
+### Modifications
+This implementation includes:
+- Updated data through 2025
+- Enhanced documentation and code comments
+- Additional performance metrics and analysis
